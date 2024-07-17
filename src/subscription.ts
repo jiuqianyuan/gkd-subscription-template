@@ -5,9 +5,9 @@ import globalGroups from './globalGroups';
 
 export default defineGkdSubscription({
   id: 717,
-  name: 'Subscription',
+  name: 'jiuqianyuan的GKD订阅',
   version: 0,
-  author: 'author',
+  author: 'jiuqianyuan',
   checkUpdateUrl: './gkd.version.json5',
   supportUri: 'https://github.com/jiuqianyuan/gkd-subscription-template',
   categories,
