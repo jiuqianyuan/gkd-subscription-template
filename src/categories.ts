@@ -38,6 +38,7 @@ export default defineGkdCategories([
     // 其它权限请求
   },
   {
+    enable: false,
     key: 7,
     name: '全屏广告',
     // 不关闭广告就无法进行其它操作的广告弹窗, 它阻碍用户操作
