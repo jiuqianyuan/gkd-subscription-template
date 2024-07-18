@@ -43,6 +43,7 @@ export default defineGkdCategories([
     // 不影响使用的广告, 所有的广告卡片及悬浮广告按钮
   },
   {
+    enable: false,
     key: 9,
     name: '分段广告',
     // 如微信朋友圈广告/酷安帖子广告/贴吧帖子广告
