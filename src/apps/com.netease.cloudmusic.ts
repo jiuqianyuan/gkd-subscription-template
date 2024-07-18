@@ -269,7 +269,8 @@ export default defineGkdApp({
           key: 2,
           name: '巨幅卡片广告2',
           matches:
-            '@TextView[index=2] <3 ViewGroup[childCount=3] <<n [id="com.netease.cloudmusic:id/container"]',
+            // '@TextView[index=2] <3 ViewGroup[childCount=3] <<n [id="com.netease.cloudmusic:id/container"]',
+            '@TextView[clickable=true] <n ViewGroup View[vid="adVideoView"]',
           snapshotUrls: 'https://i.gkd.li/i/14045424',
         },
       ],

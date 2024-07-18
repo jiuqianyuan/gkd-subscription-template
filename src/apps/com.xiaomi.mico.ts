@@ -14,7 +14,7 @@ export default defineGkdApp({
     },
     {
       key: 2,
-      name: '权限提示-请求开启定位权限弹窗',
+      name: '定位提示',
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',

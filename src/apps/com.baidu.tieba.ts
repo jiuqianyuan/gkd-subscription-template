@@ -126,6 +126,7 @@ export default defineGkdApp({
       matchTime: 10000,
       actionMaximum: 1,
       resetMatch: 'app',
+      fastQuery: true,
       rules: '[text="稍后再说"]',
       snapshotUrls: 'https://i.gkd.li/i/12496934',
     },
