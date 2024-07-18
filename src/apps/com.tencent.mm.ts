@@ -235,6 +235,80 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 6,
+      name: '分段广告-订阅号文章广告',
+      desc: '⚠ 部分文章底部可能无法点击-v8.0.50可能失效或误触严重',
+      forcedTime: 3000,
+      activityIds: [
+        'com.tencent.mm.plugin.brandservice.ui.timeline.preload.ui.TmplWebView',
+        'com.tencent.mm.plugin.webview.ui.tools.fts.MMSosWebViewUI',
+      ],
+      rules: [
+        {
+          key: 1,
+          name: '文章中部/底部广告',
+          matches:
+            'View[childCount=1] > @View > [text^="广告"][visibleToUser=true]',
+          // [text^="广告"][visibleToUser=true] //@AIsouler规则
+          excludeMatches: [
+            '[text="不感兴趣" || text="与我无关" || text="感谢你的反馈"][visibleToUser=true]',
+          ],
+          actionCd: 500,
+          snapshotUrls: [
+            'https://i.gkd.li/i/12642232',
+            'https://i.gkd.li/i/13199281',
+            'https://i.gkd.li/i/12714427',
+            'https://i.gkd.li/i/12700183',
+            'https://i.gkd.li/i/12714424',
+            'https://i.gkd.li/i/14006180',
+            'https://i.gkd.li/i/14834975',
+            'https://i.gkd.li/i/15198413',
+            'https://i.gkd.li/i/15198455',
+            'https://i.gkd.li/i/12678937', // 排除界面 添加[visibleToUser=true]
+            'https://i.gkd.li/i/12701503', // 排除界面 excludeMatches 不感兴趣
+            'https://i.gkd.li/i/16282864', // 排除界面 excludeMatches 感谢你的反馈
+          ],
+        },
+        {
+          preKeys: 1,
+          key: 2,
+          name: '点击关闭此广告【文章中部广告】',
+          matches: 'TextView[text="关闭此广告"][visibleToUser=true]',
+          snapshotUrls: 'https://i.gkd.li/i/15198422',
+        },
+        {
+          preKeys: 1,
+          key: 3,
+          name: '点击不感兴趣【文章底部广告】',
+          matches: '[text="不感兴趣"][visibleToUser=true]',
+          //'View > [id="feedbackTagContainer"][visibleToUser=true] + [id^="menu"] > [id="dislike"][text="不感兴趣"][visibleToUser=true]',
+          excludeMatches: '[text="感谢你的反馈"][visibleToUser=true]',
+          snapshotUrls: [
+            'https://i.gkd.li/i/12642234',
+            'https://i.gkd.li/i/12722301',
+            'https://i.gkd.li/i/12722331',
+            'https://i.gkd.li/i/14006203',
+            'https://i.gkd.li/i/14834966',
+            'https://i.gkd.li/i/15061424',
+            'https://i.gkd.li/i/15198459',
+          ],
+        },
+        {
+          preKeys: 3,
+          key: 4,
+          name: '点击与我无关',
+          matches: '[text="与我无关"][visibleToUser=true]',
+          // 'View > [id^="menu"] > [id="isdismatch"][text="与我无关"]',  // v8.0.49失效
+          snapshotUrls: [
+            'https://i.gkd.li/i/12642238',
+            'https://i.gkd.li/i/14006206',
+            'https://i.gkd.li/i/14834959',
+            'https://i.gkd.li/i/15198461',
+          ],
+        },
+      ],
+    },
+    {
       key: 7,
       name: '功能类-自动选中发送原图',
       desc: '图片和视频选择器-自动选中底部中间的发送原图',
