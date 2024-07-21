@@ -65,6 +65,16 @@ export default defineGkdApp({
             'https://i.gkd.li/i/15076322',
           ],
         },
+        {
+          key: 4,
+          matchTime: 10000,
+          actionMaximum: 1,
+          resetMatch: 'app',
+          activityIds: 'com.xunmeng.pinduoduo.ui.activity.HomeActivity',
+          matches:
+            'ImageView[clickable=true][focusable=true] <<n ViewGroup[childCount=2] @ViewGroup[clickable=true][focusable=true] ImageView[clickable=false][visibleToUser=true][width<120][height<120]',
+          snapshotUrls: 'https://i.gkd.li/i/16319787',
+        },
       ],
     },
     {
