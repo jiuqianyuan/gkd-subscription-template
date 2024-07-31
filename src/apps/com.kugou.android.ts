@@ -42,10 +42,11 @@ export default defineGkdApp({
         {
           key: 0,
           forcedTime: 10000,
+          fastQuery: true,
           activityIds: 'com.kugou.android.app.MediaActivity',
           matches:
-            'ViewGroup[childCount=2] > ImageView + @FrameLayout[clickable=true] > LinearLayout > ImageView',
-          snapshotUrls: 'https://i.gkd.li/i/13558426',
+            'ViewGroup[childCount=2] > ImageView + @FrameLayout[clickable=true] > LinearLayout > ImageView <<n [id="android:id/list"]',
+          snapshotUrls: 'https://i.gkd.li/i/16434752',
         },
         {
           key: 1,
