@@ -365,5 +365,24 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      enable: false,
+      key: 22,
+      name: '功能类-超话一键签到',
+      desc: '点击[一键签到]',
+      rules: [
+        {
+          fastQuery: true,
+          activityIds:
+            'com.sina.weibo.supergroup.generic.GenericChannelActivity',
+          matches: [
+            '[text*="一键签到"][visibleToUser=true]',
+            '[vid="checkinBtn"][visibleToUser=true]',
+          ],
+          exampleUrls: 'https://e.gkd.li/3fad288d-ba21-44ed-8ebe-f9b4cbde1d3c',
+          snapshotUrls: 'https://i.gkd.li/i/16420751',
+        },
+      ],
+    },
   ],
 });
