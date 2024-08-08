@@ -6,6 +6,16 @@ export default defineGkdApp({
   groups: [
     // 预留 key 0-8
     {
+      key: 0,
+      name: '开屏广告',
+      matchTime: 10000,
+      actionMaximum: 1,
+      resetMatch: 'app',
+      fastQuery: true,
+      rules: 'TextView[vid="tv_skip"][visibleToUser=true]',
+      snapshotUrls: 'https://i.gkd.li/i/16531651',
+    },
+    {
       key: 1,
       name: '更新提示',
       desc: '点击关闭',
@@ -21,6 +31,7 @@ export default defineGkdApp({
       ],
     },
     {
+      enable: false,
       key: 8,
       name: '通知提示',
       matchTime: 10000,
@@ -34,6 +45,7 @@ export default defineGkdApp({
       ],
     },
     {
+      enable: false,
       key: 9,
       name: '定位提示',
       fastQuery: true,
@@ -54,12 +66,10 @@ export default defineGkdApp({
             'com.hellobike.ads.widget.insert.dialog.HBAdvertDialog',
             'com.hellobike.atlas.business.portal.PortalActivity',
           ],
-          matches:
-            'FrameLayout[id="com.jingyao.easybike:id/hbDialogLayout"] + ImageView[id="com.jingyao.easybike:id/actionDialogClose"][clickable=true]',
+          matches: '[vid="actionDialogClose"]',
           snapshotUrls: [
-            'https://i.gkd.li/i/12650028',
             'https://i.gkd.li/i/12650090',
-            'https://i.gkd.li/i/13331231',
+            'https://i.gkd.li/i/16503613',
           ],
         },
         {
@@ -96,6 +106,7 @@ export default defineGkdApp({
       snapshotUrls: 'https://i.gkd.li/i/12650071',
     },
     {
+      enable: false,
       key: 15,
       fastQuery: true,
       name: '功能类-新人教学弹窗',
